@@ -1,6 +1,6 @@
 db.produtos.find({
   valoresNutricionais: {
-    $eleMatch: {
+    $elemMatch: {
       $and: [
         { tipo: "calorias" },
         { quantidade: { $lt: 500 } },
