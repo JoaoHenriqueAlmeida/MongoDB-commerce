@@ -1,7 +1,7 @@
 db.produtos.find({
   $and: [
     { vendidos: { $ne: 50 } },
-    { tags: { exists: false } },
+    { tags: { $exists: false } },
   ],
 }, {
   _id: false,
